@@ -1,0 +1,48 @@
+.bar {
+    transition: opacity 0.2s;
+}
+
+.bar:hover {
+    opacity: 0.75;
+    cursor: default;
+}
+
+.bar-label {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    fill: var(--brown);
+}
+
+.x-axis text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    fill: var(--brown);
+}
+
+.y-axis text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-weight: bold;
+    fill: var(--espresso);
+}
+
+.axis-label {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    fill: var(--espresso);
+}
+
+.x-axis path,
+.x-axis line,
+.y-axis path {
+    stroke: #C7C3BC;
+}
+
+.grid line {
+    stroke: var(--grid);
+    stroke-width: 1px;
+}
+
+.grid path {
+    display: none;
+}
