@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>IMDb Movie Explorer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- D3.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- WEBSITE INTRODUCTION -->
+        <section id="intro">
+
+            <div id="title">
+
+                <p class="subtitle">THE CINEMA ARCHIVE</p>
+
+                <h1>IMDb Movie Explorer</h1>
+
+                <p class="text">
+                    Explore the cinematic world through
+                    movie genres, ratings and trends
+                    from 2006 to 2016.
+                </p>
+
+            </div>
+
+            <!-- VISUALIZATION SELECTION -->
+            <div id="controls">
+
+                <label for="visual-select">
+                    Explore the Dataset
+                </label>
+
+                <select id="visual-select">
+
+                    <option value="genre">
+                        Genre Popularity Visualization
+                    </option>
+
+                    <option value="trend" disabled>
+                        Rating Trend Visualization
+                    </option>
+
+                    <option value="ranking">
+                        Ranking Table
+                    </option>
+
+                </select>
+
+                <button id="explore-btn">
+                    Explore
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- GENRE POPULARITY VISUALIZATION -->
+        <section id="chart-section">
+
+            <h2>Genre Popularity</h2>
+
+            <p class="chart-description">
+                Percentage of movies belonging to each genre.
+            </p>
+
+            <div id="chart"></div>
+
+            <p id="chart-note">
+                A movie may belong to multiple genres.
+            </p>
+
+        </section>
+
+
+        <!-- RANKING TABLE -->
+        <section id="table" hidden>
+
+            <h2>Movie Ranking</h2>
+
+            <p class="chart-description">
+                Discover the highest-rated movies.
+            </p>
+
+            <div class="filters">
+
+                <input type="search"
+                       id="search-title"
+                       placeholder="Search movie title">
+
+                <select id="filter-genre">
+                    <option value="All">All Genres</option>
+                </select>
+
+                <select id="filter-year">
+                    <option value="All">All Years</option>
+                </select>
+
+                <input type="search"
+                       id="filter-actor"
+                       list="actor-list"
+                       placeholder="Search actor">
+
+                <datalist id="actor-list"></datalist>
+
+            </div>
+
+            <table id="ranking-table">
+
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Movie</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ranking-body"></tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
